@@ -12,7 +12,7 @@ class Solution {
     public ListNode middleNode(ListNode head) {
         ListNode fastptr = head;
         ListNode slowptr = head;
-        while(fastptr!=null && fastptr.next!=null)//why fastptr.next!= null if not typed returns null pointer exception
+        while(fastptr!=null && fastptr.next!=null)
         {
             fastptr = fastptr.next.next;
             slowptr = slowptr.next;
