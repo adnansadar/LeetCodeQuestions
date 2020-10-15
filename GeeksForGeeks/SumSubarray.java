@@ -1,39 +1,5 @@
 
 import java.util.*;
-
-class SumSubarray {
-	public static void main (String[] args) {
-	    Scanner sc = new Scanner(System.in);
-		int T = sc.nextInt();
-		int N = sc.nextInt();
-		int sum = sc.nextInt();
-		int[] A = new int[N];
-		int newsum=0;
-		int ptr=0;
-		while(T>0)
-		{
-    		for(int i=0; i<N; i++)
-    		{
-    		    A[i] = sc.nextInt();
-    		}
-    		
-    		for(int i=0; i<A.length;i++)
-    		{
-    		    newsum+= A[i];
-    		    if(newsum == sum)
-    		    System.out.println((ptr+1)+" "+(i+1));
-    		    else if(newsum>sum)
-    		    {
-    		        newsum -= ptr;
-    		        ptr++;
-    		    }
-    		}
-    		T--;
-		}
-	}
-}
-
-import java.util.*;
 import java.lang.*;
 import java.io.*;
 
@@ -61,8 +27,8 @@ class GFG {
 
         long result = m[first];
 
-        while (result != s) {
-            if (result > s) {
+        while (result != s) { 
+            if (result > s) {   
                 if (first == last) {
                     last++;
                     first++;
